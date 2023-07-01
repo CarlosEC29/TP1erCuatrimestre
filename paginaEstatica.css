@@ -1,0 +1,96 @@
+body {
+  margin: 20px;
+  background: url("./imagenes/Enexia2.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.encabezado p {
+  color: bold;
+  text-size-adjust: 13px;
+}
+
+form {
+  margin: 20px;
+  /* Centramos el formulario */
+  width: 85%;
+  /* Sin ancho no podemos centrar el formulario */
+  font-style: italic;
+  font-weight: bold;
+  background-color: white;
+  background-position:center;
+  opacity: 75%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* Color blanco para el formulario */
+  padding: 10px;
+  /* separamos los bordes del form del resto de elementos */
+  border-radius: 15px;
+  /* Redondeamos los bordes del form */
+}
+
+.form input,
+textarea {
+  padding: 5px;
+  /* Separamos la letra del interior (contenido) en los inputs de los bordes */
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  border: green 10px solid;
+  color: #1380ec;
+  font-size: 1em;
+}
+
+label {
+  display: block;
+  /* Ahora los inputs quedan debajo de los label */
+  padding: 2px;
+  /* Separando espacios internos */
+}
+
+/* Estilo de botón */
+.button-71 {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-71:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.button-71:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .button-71 {
+    padding: 16px 48px;
+  }
+}
