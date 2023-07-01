@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <img src="imagenes\Enexialogo.jpg" alt="Enexia" width="75" height="50">
+        <a class="navbar-brand" href="#">Servicios Integrales</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./paginaEstatica.html">Formulario</a></li>
+                <li><a class="dropdown-item" href="./tareasDinamicas.html">To Do List</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Acerca de Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item">Contacto</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Trabajos realizados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Galería de imagenes</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+    <div id="carouselImagenesPresentacion" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagenes\Enexia2.jpg" class="d-block w-50" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Buenos dìas a todos nuestros clientes y proveedores</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes\Enexia1.jpg" class="d-block w-50" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Skid de transporte</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes\Enexia3.jpg" class="d-block w-50" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tracing scrubber de gas</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes\Enexia4.jpg" class="d-block w-50" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tablero elèctrico</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes\Enexia5.jpg" class="d-block w-50" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Montaje y conexionado de CCM</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="imagenes\Enexia6.jpg" class="d-block w-50" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Montaje y conexionado en un skid petrolero.</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselImagenesPresentacion" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+      <h1>Bienvenidos a ENEXIA Servicios Integrales</h1>
+      <div class="col-lg-8 px-0">
+        <p class="fs-5">ENEXIA Servicios Integrales es una empresa dedicada a realizar distintos tipos de montajes industriales elèctricos y a la realizaciòn de proyectos de ingenierìa.</p>
+        <p>Dentro de los servicios que presenta se encuentran los servicios de Proyectos de Ingenierìa, montaje de equipos elèctricos, iluminaciòn, puesta a tierra, venta de materiales elèctricos y automatizaciòn de procesos industriales.</p>
+        <p>Ante cualquier inquietud, estamos para brindarles nuestra atenciòn y ofrecerles nuestros servicios y productos. No duden en comunicarse.</p>
+        <hr class="col-1 my-4" />
+      </div>
+    </div>
+  </div>
+ </body>
+</html>
