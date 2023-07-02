@@ -11,11 +11,11 @@ body {
 }
 
 .encabezado p {
- margin: 15px;
- width: 85%;
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- font-weight: bold;
- text-align: justify;
+  margin: 15px;
+  width: 85%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  text-align: justify;
 }
 
 form {
@@ -26,7 +26,7 @@ form {
   font-style: italic;
   font-weight: bold;
   background-color: white;
-  background-position:center;
+  background-position: center;
   opacity: 75%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /* Color blanco para el formulario */

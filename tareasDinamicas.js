@@ -14,7 +14,7 @@ function newElement() {
   li.addEventListener("click", function (ev) {
     ev.target.classList.toggle("checked");
   }
-  )
+)
 
   var inputValue = document.getElementById("miTarea").value;
   var t = document.createTextNode(inputValue);
