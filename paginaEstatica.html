@@ -63,30 +63,23 @@
     
 <!--Ver a partir de aca, ejemplo sacado de https://desarrolloweb.com/articulos/1006.php-->
 <p>
-    <input type="radio" name="status" value="interesado" id="interesado"> <label for="interesado">Estoy interesado</label> 
-    <br>
-    <input type="radio" name="status" value="indeciso" id="indeciso"> <label for="indeciso">Estoy indeciso</label> 
-    <br>
-    <input type="radio" name="status" value="no_interesado" id="no_interesado"> <label for="no_interesado">No me interesa</label> 
+  2) ¿Cómo valoraría el trato con los directivos de la empresa?:</label>
 </p>
-<button id="mostrar">Mostrar opción activa</button>
-<button id="setear">Setear activo al valor "interesado"</button>
+<p>
+  <input class="form-check-input" type="radio" name="status" value="Muy satisfecho" id="Muy satisfecho"><label for="Muy satisfecho">Muy satisfecho</label>
+  <br>
+  <input class="form-check-input" type="radio" name="status" value="Satisfecho" id="Satisfecho"><label for="Satisfecho">Satisfecho</label> 
+  <br>
+  <input class="form-check-input" type="radio" name="status" value="Regular" id="Regular"><label for="Regular">Regular</label> 
+  <br>
+  <input class="form-check-input" type="radio" name="status" value="Insatisfecho" id="Insatisfecho"><label for="Insatisfecho">Insatisfecho</label> 
+  <br>
+  <input class="form-check-input" type="radio" name="status" value="Muy Insatisfecho" id="Muy Insatisfecho"><label for="Muy Insatisfecho">Muy Insatisfecho</label>
+</p>
+<small id="error-opciones-trato" class="mensaje-error"></small>
 
-    <div>
-      <label type="text">2) ¿Cómo valoraría el trato con los directivos de la empresa?:</label><small id="error-opciones-trato" class="mensaje-error"></small>
-    </div>
+  
     
-    <div name="opciones2">
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" value="Muy satisfecho">Muy satisfecho
-      <br>
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" value="Satisfecho">Satisfecho
-      <br>
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" value="Regular">Regular
-      <br>
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" value="Insatisfecho">Insatisfecho
-      <br>
-      <input class="form-check-input" type="radio" name="inlineRadioOptions" value="Muy Insatisfecho">Muy Insatisfecho
-    </div>
 
     <div class="d-flex flex-column justify-content-center item3-formulario">
       <label type="text" id="item3" for="validationCustom01" class="form-label">3) ¿Cuál fue el servicio/trabajo contratado?</label>

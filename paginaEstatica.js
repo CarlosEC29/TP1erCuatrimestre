@@ -50,27 +50,26 @@ const validarEmail = () => {
     }
 }
 
-document.getElementById('mostrar').addEventListener('click', function() {
-    // let valorActivo = document.querySelector('input[name="status"]:checked').value; // Esto tiene el problema de que puede que un elemento no esté activo, entonces no se podría acceder al value de un null, lo que sería un error en tiempo de ejecución
+
     let elementoActivo = document.querySelector('input[name="status"]:checked');
     if(elementoActivo) {
-        alert(elementoActivo.value);
+        console.log(elementoActivo.value);
     } else {
-        alert('No hay ninún elemento activo');
+        document.getElementById('error-opciones-trato').innerHTML = "Debe seleccionar una opción";
     }
-});
 
-document.getElementById('setear').addEventListener('click', function() {
+
+// document.getElementById('setear').addEventListener('click', function() {
     setRadio('status', 'interesado')
-});
+// });
 
-function setRadio(name, value) {
-    document.querySelectorAll(`input[name="inlineRadioOptions"]`).forEach(element => {
-        if(element.value === value) {
-            element.checked = true;
-        }
-    });
-}
+// function setRadio(name, value) {
+   // document.querySelectorAll(`input[name="status"]`).forEach(element => {
+     //   if(element.value === value) {
+       //     element.checked = true;
+        //}
+    //});
+//}
 
 
 // const validarRadioInput = () => {
@@ -102,7 +101,7 @@ const enviarFormulario = () => {
     let formularioCorrecto = true;
   // let validaRadioInput = validarRadioInput()
    // console.log( 'opciones2 ' + validaRadioInput[i]);
-    console.log(setRadio(name, value));
+    console.log(elementoActivo);
     }
 
 
