@@ -67,7 +67,7 @@ const validarTrato = () => {
     }
 
     if (!seleccionado) {
-        document.getElementById('error-opciones-trato').innerHTML = "El nombre es requerido";
+        document.getElementById('error-opciones-trato').innerHTML = "Debe seleccionar una opción";
     }
     return seleccionado;
 }
