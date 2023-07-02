@@ -3,39 +3,51 @@ const esEmailValido = (email) => {
     return emailRegex.test(email);
 }
 
-const validarNombre = () => {
+const enviarFormulario = () => {
+    let formularioCorrecto = true;
+    console.log("Validando campos ")
+    console.log("Formulario correcto " + formularioCorrecto);
+
+
+    //validar nombre
     const nombreInput = document.getElementById('nombre');
     if (nombreInput.value.trim() == "") {
         // error de required
         document.getElementById('error-nombre').innerHTML = "El nombre es requerido";
         nombreInput.classList.add('is-invalid');
+        formularioCorrecto = false;
     } else if (nombreInput.value.trim().length < 5) {
         // error de minLength
         document.getElementById('error-nombre').innerHTML = "El nombre debe tener al menos 5 caracteres";
         nombreInput.classList.add('is-invalid');
+        formularioCorrecto = false;
+
     } else {
         document.getElementById('error-nombre').innerHTML = "";
         nombreInput.classList.remove('is-invalid');
     }
-}
 
-const validarApellido = () => {
-    const Input = document.getElementById('apellido');
-    if (Input.value.trim() == "") {
+    //validar apellido
+    const apellidoInput = document.getElementById('apellido');
+    if (apellidoInput.value.trim() == "") {
         // error de required
         document.getElementById('error-apellido').innerHTML = "El apellido es requerido";
-        Input.classList.add('is-invalid');
-    } else if (Input.value.trim().length < 5) {
+        apellidoInput.classList.add('is-invalid');
+        formularioCorrecto = false;
+
+    } else if (apellidoInput.value.trim().length < 5) {
         // error de minLength
         document.getElementById('error-apellido').innerHTML = "El apellido debe tener al menos 5 caracteres";
-        Input.classList.add('is-invalid');
+        apellidoInput.classList.add('is-invalid');
+        formularioCorrecto = false;
+
     } else {
         document.getElementById('error-apellido').innerHTML = "";
-        Input.classList.remove('is-invalid');
+        apellidoInput.classList.remove('is-invalid');
     }
-}
 
-const validarEmail = () => {
+
+    //validar email
     const emailInput = document.getElementById('email');
     if (emailInput.value.trim() == "") {
         // error de required
@@ -48,80 +60,87 @@ const validarEmail = () => {
     } else {
         document.getElementById('error-email').innerHTML = "";
     }
+
+    //validar conoceer a la empresa
+    const conocerEmpresaSelect = document.getElementById("validationCustom01");
+    let conocerEmpresaValue = conocerEmpresaSelect.options[conocerEmpresaSelect.selectedIndex].value;
+    if (conocerEmpresaValue == "") {
+        document.getElementById("conocerALaEmpresa-error").innerHTML = "Debe seleccionar una opción";
+        formularioCorrecto = false;
+    }
+
+    //validar trato ///validar esto
+    const tratoSelected = document.querySelector('input[name="directivos"]:checked');
+    if (!tratoSelected) {
+        document.getElementById('error-directivos').innerHTML = "Debe seleccionar una opción";
+        formularioCorrecto = false;
+    }
+
+    //validar tipo servicio
+    let tipoServSelected = document.getElementById("validationCustom03");
+    let tipoServSelectedValue = tipoServSelected.options[tipoServSelected.selectedIndex].value;
+    if (tipoServSelectedValue == "no-value") {
+        document.getElementById("tipo-servicio-error").innerHTML = "Debe seleccionar una opción";
+    }
+
+    //validar atencion 
+    const atencionSelected = document.querySelector('input[name="atencion"]:checked');
+    if (!atencionSelected) {
+        document.getElementById('error-atencion').innerHTML = "Debe seleccionar una opción";
+    }
+
+    //validar materiales
+    const materialesSelected = document.querySelector('input[name="materiales"]:checked');
+    if (!materialesSelected) {
+        document.getElementById('error-materiales').innerHTML = "Debe seleccionar una opción";
+        formularioCorrecto = false;
+    }
+
+    //validar tiempo d atencion
+    let tAtencionSelected = document.querySelector('input[name="tAtencion"]:checked');
+    if (!tAtencionSelected) {
+        document.getElementById('error-tAtencion').innerHTML = "Debe seleccionar una opción";
+        formularioCorrecto = false;
+    }
+
+    //validar capacitacion 
+    let capacitacionSelected = document.querySelector('input[name="capacitacion"]:checked');
+    if (!capacitacionSelected) {
+        document.getElementById('error-capacitacion').innerHTML = "Debe seleccionar una opción";
+        formularioCorrecto = false;
+    }
+
+    //validar recomendacion
+    let recomendacionSelected = document.querySelector('input[name="recomendacion"]:checked');
+    if (!recomendacionSelected) {
+        document.getElementById('error-recomendacion').innerHTML = "Debe seleccionar una opción";
+        formularioCorrecto = false;
+    }
+
+    console.log("Formulario correcto " + formularioCorrecto);
+
+    if(formularioCorrecto) {
+        console.log("Nombre: ", nombreInput.value);
+        console.log("Apellido: ", apellidoInput.value);
+        console.log("Email: ", emailInput.value);
+        console.log("1) ¿C+omo conocio a la empresa?: ", conocerEmpresaValue);
+        console.log("2) ¿Cómo valoraría el trato con los directivos de la empresa?: ", tratoSelected.value);
+        console.log("3) ¿Cuál fue el servicio/trabajo contratado?: ", tipoServSelectedValue);
+        console.log("4) ¿Cómo valoraría la atención brindada por el personal?: ", atencionSelected.value);
+        console.log("6) En cuanto a la calidad de los materiales utilizados, ¿qué opinión tiene al respecto?: ", materialesSelected.value);
+        console.log("7) ¿Cómo valoraría el tiempo demorado en la realización de la tarea ó venta de productos?: ", tAtencionSelected.value);
+        console.log("8) ¿Considera que el personal interviniente estaba capacitado para realizar la tarea?: ", capacitacionSelected.value);
+        console.log("9) ¿Recomendaría a la empresa?: ", recomendacionSelected.value);
+
+    }
+
 }
-
-
-    let elementoActivo = document.querySelector('input[name="status"]:checked');
-    if(elementoActivo) {
-        console.log(elementoActivo.value);
-    } else {
-        document.getElementById('error-opciones-trato').innerHTML = "Debe seleccionar una opción";
-    }
-
-
-// document.getElementById('setear').addEventListener('click', function() {
-    setRadio('status', 'interesado')
-// });
-
-// function setRadio(name, value) {
-   // document.querySelectorAll(`input[name="status"]`).forEach(element => {
-     //   if(element.value === value) {
-       //     element.checked = true;
-        //}
-    //});
-//}
-
-
-// const validarRadioInput = () => {
-  //  const opciones2 = document.getElementsByName('opciones2');
-    
-    //console.log('opciones2' + opciones2);
-
-    //let seleccionado = false;
-    
-   // for (let i= 0; i < opciones2.length; i++) {
-
-     //   if ( opciones2[i].checked) {
-       //     console.log('opciones2 ' + opciones2[i]);
-
-         //   seleccionado = true;
-           // break;
-       // }
-   // }
-
-  //  if (!seleccionado) {
-    //    document.getElementById('error-opciones-trato').innerHTML = "Debe seleccionar una opción";
-   // }
-  //  return seleccionado;
-//} 
-
-
-
-const enviarFormulario = () => {
-    let formularioCorrecto = true;
-  // let validaRadioInput = validarRadioInput()
-   // console.log( 'opciones2 ' + validaRadioInput[i]);
-    console.log(elementoActivo);
-    }
-
-
-
 
 const inicializarJs = () => {
     const boton = document.getElementById("btn-enviar");
     boton.addEventListener('click', function (e) {
         enviarFormulario();
     });
-
-    document.getElementById('nombre').addEventListener('blur', function (e) {
-        validarNombre();
-    })
-    document.getElementById('apellido').addEventListener('blur', function (e) {
-        validarApellido();
-    })
-    document.getElementById('email').addEventListener('blur', function (e) {
-        esEmailValido();
-    })
 
 }
 
