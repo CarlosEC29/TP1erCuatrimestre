@@ -1,204 +1,237 @@
 <!DOCTYPE html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="paginaEstatica.css" rel="stylesheet"/>
-    <script src="paginaEstatica.js" type="text/javascript"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="paginaEstatica.css" rel="stylesheet" />
+  <script src="paginaEstatica.js" type="text/javascript"></script>
 </head>
 
 <body>
   <div class="d-flex flex-column">
-    <div class="d-flex flex-column align-items-center encabezado"> 
+    <div class="d-flex flex-column align-items-center encabezado">
       <!--Título del formulario-->
       <h1>Formulario de conformidad</h1>
-      <!--Párrafo de introducción --> 
-      <p>Este formulario sirve para recopilar información sobre la opinión que usted tiene de la empresa ENEXIA. La información que brinde sólo servirá para obtener una devolución de lo que usted opina de la empresa y, en caso de tener respuestas negativas, servirán como indicadores para que la empresa mejore sus servicios ofrecidos.
-        A continuación, se describen 10 puntos de dicha empresa, por favor de responder cada pregunta de forma responsable. Desde ya, les agradecemos el tiempo brindado y, deseamos que tenga muy buenos días!!!!</p>
+      <!--Párrafo de introducción -->
+      <p>Este formulario sirve para recopilar información sobre la opinión que usted tiene de la empresa ENEXIA. La
+        información que brinde sólo servirá para obtener una devolución de lo que usted opina de la empresa y, en caso
+        de tener respuestas negativas, servirán como indicadores para que la empresa mejore sus servicios ofrecidos.
+        A continuación, se describen 10 puntos de dicha empresa, por favor de responder cada pregunta de forma
+        responsable. Desde ya, les agradecemos el tiempo brindado y, deseamos que tenga muy buenos días!!!!</p>
     </div>
   </div>
-    
-    
-    <form class="row g-3 needs-validation" id="miformulario">
-      <div class="d-flex flex-column justify-content-center item1-formulario">
-        <input name="nombre" type="text" placeholder="Nombre" maxlength="15" style="width: 700px;" pattern="[a-zA-Z0-9]+" required autofocus/>
-        <input name="apellido" type="text" placeholder="Apellido" maxlength="10" style="width: 700px;" pattern="[a-zA-Z0-9]+" required autofocus/>
-				<input name="email" type="email" placeholder="Correo electrónico" style="width: 700px;" required />	
-				<input name="teléfono" type="tel" placeholder="Teléfono" style="width: 700px;" required />
-        <input name="locacion" type="text" placeholder="Dirección" maxlength="20" style="width: 700px;" pattern="[a-zA-Z0-9]+" required autofocus />
+
+
+  <form>
+    <div>
+      <div class="d-flex flex-row align-items-center item-fomulario">
+        <div class="flex-grow-1">
+          <input  id="nombre" type="text" class="form-control" placeholder="Nombre" maxlength="15" style="width: 700px;"
+            pattern="[a-zA-Z0-9]+" required autofocus />
+          <small id="error-nombre" class="mensaje-error"></small>
+        </div>
       </div>
-
-      <div class="d-flex flex-column justify-content-center item1-formulario">
-      <p>1) ¿Cómo conoció a la empresa?</p>
-        <label type="text" id="item1" for="validationCustom01" class="form-label"></label>
-    <select class="form-select" id="validationCustom01" style="width: 700px;" required>
-      <option selected disabled value="">Elegir una opciòn</option>
-          <option>Página Web</option>
-          <option>Recomendaciones</option>
-          <option>Trabajos o servicios brindados antiguamente</option>
-          <option>Redes Sociales</option>
-          <option>Publicidades</option>
-    </select>
-    <div class="invalid-feedback">
-      Por favor, seleccionar una opciòn.
+      <div class="d-flex flex-row align-items-center item-fomulario">
+        <div class="flex-grow-1">
+          <input id="apellido" name="apellido" type="text" class="form-control"  placeholder="Apellido" maxlength="10" style="width: 700px;"
+            pattern="[a-zA-Z0-9]+" required autofocus />
+          <small id="error-apellido" class="mensaje-error"></small>
+        </div>
+      </div>
+      <div class="d-flex flex-row align-items-center item-fomulario">
+        <div class="flex-grow-1">
+          <input id="email" type="email" class="form-control"  placeholder="Correo electrónico" style="width: 700px;" required />
+          <small id="error-email" class="mensaje-error"></small>
+        </div>
+      </div>
     </div>
-  </div>
-        
-  <label type="text" id="item2" for="opciones"></label>2) ¿Cómo valoraría el trato con los directivos de la empresa?:</label>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">Muy satisfecho</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">Satisfecho</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <label class="form-check-label" for="inlineRadio3">Regular</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-    <label class="form-check-label" for="inlineRadio4">Insatisfecho</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-    <label class="form-check-label" for="inlineRadio5">Muy Insatisfecho</label>
-  </div>
 
-  <div class="d-flex flex-column justify-content-center item3-formulario">
-    <label type="text" id="item3" for="validationCustom01" class="form-label">3) ¿Cuál fue el servicio/trabajo contratado?</label>
-    <select class="form-select" id="validationCustom03" style="width: 700px;" required>
-      <option selected disabled value="">Elegir una opciòn</option>
-      <option>Montaje eléctrico</option>
-      <option>Iluminación</option>
-      <option>Puesta a tierra</option>
-      <option>Tableros Eléctricos</option>
-      <option>Ingeniería</option>
-      <option>Automatización</option>
-      <option>Venta de materiales eléctricos</option>
-    </select>
-    <div class="invalid-feedback">
-      Por favor, seleccionar una opciòn.
+    <div class="d-flex flex-column justify-content-center item1-formulario">
+      <label type="text" id="item1" for="validationCustom01" class="form-label">¿Cómo conoció a la empresa?</label>
+      <select class="form-select" id="validationCustom01" required>
+        <option selected disabled value="">Elegir una opciòn</option>
+        <option>Página Web</option>
+        <option>Recomendaciones</option>
+        <option>Trabajos o servicios brindados antiguamente</option>
+        <option>Redes Sociales</option>
+        <option>Publicidades</option>
+      </select>
+      <div class="invalid-feedback">
+        Por favor, seleccionar una opciòn.
+      </div>
     </div>
+
+    
+    <label type="text" id="item2" for="opciones"></label>2) ¿Cómo valoraría el trato con los directivos de la
+    empresa?:</label>
+    <div name="opciones">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Muy satisfecho</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Satisfecho</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Regular</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+        <label class="form-check-label" for="inlineRadio4">Insatisfecho</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+        <label class="form-check-label" for="inlineRadio5">Muy Insatisfecho</label>
+      </div>
+      <small id="error-opciones-trato" class="mensaje-error"></small>
   </div>
 
-  <label type="text" id="item4" for="opciones">4) ¿Cómo valoraría la atención brindada por el personal?:</label>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">Muy satisfecho</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">Satisfecho</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <label class="form-check-label" for="inlineRadio3">Regular</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-    <label class="form-check-label" for="inlineRadio4">Insatisfecho</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-    <label class="form-check-label" for="inlineRadio5">Muy Insatisfecho</label>
-  </div>
+    <div class="d-flex flex-column justify-content-center item3-formulario">
+      <label type="text" id="item3" for="validationCustom01" class="form-label">3) ¿Cuál fue el servicio/trabajo
+        contratado?</label>
+      <select class="form-select" id="validationCustom03" style="width: 700px;" required>
+        <option selected disabled value="">Elegir una opciòn</option>
+        <option>Montaje eléctrico</option>
+        <option>Iluminación</option>
+        <option>Puesta a tierra</option>
+        <option>Tableros Eléctricos</option>
+        <option>Ingeniería</option>
+        <option>Automatización</option>
+        <option>Venta de materiales eléctricos</option>
+      </select>
+      <div class="invalid-feedback">
+        Por favor, seleccionar una opciòn.
+      </div>
+    </div>
 
-   <label type="text" id="item5" for="exampleFormControlTextarea1">5) ¿Qué puede destacar del trabajo / servicio ofrecido?:</label>
-   <div class="d-flex flex-column justify-content-center item5-formulario">
-    <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea" style="width: 700px;" maxlength="250"></textarea>
-  </div>
+    <label type="text" id="item4" for="opciones">4) ¿Cómo valoraría la atención brindada por el personal?:</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <label class="form-check-label" for="inlineRadio1">Muy satisfecho</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <label class="form-check-label" for="inlineRadio2">Satisfecho</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+      <label class="form-check-label" for="inlineRadio3">Regular</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+      <label class="form-check-label" for="inlineRadio4">Insatisfecho</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+      <label class="form-check-label" for="inlineRadio5">Muy Insatisfecho</label>
+    </div>
 
-  <label type="text" id="item6" for="opciones">6) En cuanto a la calidad de los materiales utilizados, ¿qué opinión tiene al respecto?:</label>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">Excelente calidad</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">Buena calidad</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <label class="form-check-label" for="inlineRadio3">Regular</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-    <label class="form-check-label" for="inlineRadio4">Muy poca calidad</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
-    <label class="form-check-label" for="inlineRadio5">Mala calidad</label>
-  </div>
+    <label type="text" id="item5" for="exampleFormControlTextarea1">5) ¿Qué puede destacar del trabajo / servicio
+      ofrecido?:</label>
+    <div class="d-flex flex-column justify-content-center item5-formulario">
+      <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea"
+        style="width: 700px;" maxlength="250"></textarea>
+    </div>
 
-  <label type="text" id="item7" for="opciones">7) ¿Cómo valoraría el tiempo demorado en la realización de la tarea ó venta de productos?:</label>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">Mucha demora</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">Poca demora</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <label class="form-check-label" for="inlineRadio3">Normal</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-    <label class="form-check-label" for="inlineRadio4">Rápido</label>
-  </div>
+    <label type="text" id="item6" for="opciones">6) En cuanto a la calidad de los materiales utilizados, ¿qué opinión
+      tiene al respecto?:</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <label class="form-check-label" for="inlineRadio1">Excelente calidad</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <label class="form-check-label" for="inlineRadio2">Buena calidad</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+      <label class="form-check-label" for="inlineRadio3">Regular</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+      <label class="form-check-label" for="inlineRadio4">Muy poca calidad</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+      <label class="form-check-label" for="inlineRadio5">Mala calidad</label>
+    </div>
 
-  <label type="text" id="item8" for="opciones">8) ¿Considera que el personal interviniente estaba capacitado para realizar la tarea?:</label>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">Si</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">No</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <label class="form-check-label" for="inlineRadio3">Tal vez</label>
-  </div>
-  <label for="exampleFormControlTextarea1">En caso de responder: No / Tal vez, describir por qué considera eso:</label>
-  <div class="d-flex flex-column justify-content-center item1-formulario">
-    <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea" style="width: 700px;" maxlength="250"></textarea>
-  </div>
-  
-  <label type="text" id="item9" for="opciones">9) ¿Recomendaría a la empresa?:</label>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">Si</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">No</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-    <label class="form-check-label" for="inlineRadio3">Tal vez</label>
-  </div>
-  <label for="exampleFormControlTextarea1">En caso de responder: No / Tal vez, describir por qué considera eso:</label>
-  <div class="d-flex flex-column justify-content-center item1-formulario">
-    <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea" style="width: 700px;" maxlength="250"></textarea>
-  </div>
+    <label type="text" id="item7" for="opciones">7) ¿Cómo valoraría el tiempo demorado en la realización de la tarea ó
+      venta de productos?:</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <label class="form-check-label" for="inlineRadio1">Mucha demora</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <label class="form-check-label" for="inlineRadio2">Poca demora</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+      <label class="form-check-label" for="inlineRadio3">Normal</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+      <label class="form-check-label" for="inlineRadio4">Rápido</label>
+    </div>
 
-  <label type="text" id="item10" for="exampleFormControlTextarea1">10) Si desea agregar algo más, por favor desarrolle a continuación (Opcional).</label>
-  <div class="d-flex flex-column justify-content-center item1-formulario">
-    <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea" style="width: 700px;" maxlength="250"></textarea>
-  </div>
+    <label type="text" id="item8" for="opciones">8) ¿Considera que el personal interviniente estaba capacitado para
+      realizar la tarea?:</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <label class="form-check-label" for="inlineRadio1">Si</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <label class="form-check-label" for="inlineRadio2">No</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+      <label class="form-check-label" for="inlineRadio3">Tal vez</label>
+    </div>
+    <label for="exampleFormControlTextarea1">En caso de responder: No / Tal vez, describir por qué considera
+      eso:</label>
+    <div class="d-flex flex-column justify-content-center item1-formulario">
+      <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea"
+        style="width: 700px;" maxlength="250"></textarea>
+    </div>
 
-  <div class="col-12">
-    <span onclick="comprobarCampos()"></span>
-    <button type="submit" class="button-71" role="button">Enviar formulario</button>
-  </div>
-</form>
+    <label type="text" id="item9" for="opciones">9) ¿Recomendaría a la empresa?:</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+      <label class="form-check-label" for="inlineRadio1">Si</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+      <label class="form-check-label" for="inlineRadio2">No</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+      <label class="form-check-label" for="inlineRadio3">Tal vez</label>
+    </div>
+    <label for="exampleFormControlTextarea1">En caso de responder: No / Tal vez, describir por qué considera
+      eso:</label>
+    <div class="d-flex flex-column justify-content-center item1-formulario">
+      <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea"
+        style="width: 700px;" maxlength="250"></textarea>
+    </div>
+
+    <label type="text" id="item10" for="exampleFormControlTextarea1">10) Si desea agregar algo más, por favor desarrolle
+      a continuación (Opcional).</label>
+    <div class="d-flex flex-column justify-content-center item1-formulario">
+      <textarea class="form-control" placeholder="Deje aquí un comentario (Máx. 250 carácteres)" id="floatingTextarea"
+        style="width: 700px;" maxlength="250"></textarea>
+    </div>
+
+    <div class="col-12">
+      <button type="button" id="btn-enviar" class="button-71" role="button">Enviar formulario</button>
+    </div>
+  </form>
 
 </body>
+
 </html>
-
-

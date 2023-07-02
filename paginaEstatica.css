@@ -94,3 +94,7 @@ label {
     padding: 16px 48px;
   }
 }
+
+.mensaje-error {
+  color: red;
+}
