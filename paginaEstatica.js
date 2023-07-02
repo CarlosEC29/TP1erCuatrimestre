@@ -50,34 +50,59 @@ const validarEmail = () => {
     }
 }
 
-const validarTrato = () => {
-    const opciones = document.getElementsByName('opciones');
-    
-    console.log('opciones ' + opciones);
+document.getElementById('mostrar').addEventListener('click', function() {
+    // let valorActivo = document.querySelector('input[name="status"]:checked').value; // Esto tiene el problema de que puede que un elemento no esté activo, entonces no se podría acceder al value de un null, lo que sería un error en tiempo de ejecución
+    let elementoActivo = document.querySelector('input[name="status"]:checked');
+    if(elementoActivo) {
+        alert(elementoActivo.value);
+    } else {
+        alert('No hay ninún elemento activo');
+    }
+});
 
-    let seleccionado = false;
-    for (var i = 0; i < opciones.length; i++) {
+document.getElementById('setear').addEventListener('click', function() {
+    setRadio('status', 'interesado')
+});
 
-        if ( opciones[i] === "radio") {
-            console.log('opciones ' + opciones[i]);
-
-            seleccionado = true;
-            break;
+function setRadio(name, value) {
+    document.querySelectorAll(`input[name="inlineRadioOptions"]`).forEach(element => {
+        if(element.value === value) {
+            element.checked = true;
         }
-    }
-
-    if (!seleccionado) {
-        document.getElementById('error-opciones-trato').innerHTML = "Debe seleccionar una opción";
-    }
-    return seleccionado;
+    });
 }
+
+
+// const validarRadioInput = () => {
+  //  const opciones2 = document.getElementsByName('opciones2');
+    
+    //console.log('opciones2' + opciones2);
+
+    //let seleccionado = false;
+    
+   // for (let i= 0; i < opciones2.length; i++) {
+
+     //   if ( opciones2[i].checked) {
+       //     console.log('opciones2 ' + opciones2[i]);
+
+         //   seleccionado = true;
+           // break;
+       // }
+   // }
+
+  //  if (!seleccionado) {
+    //    document.getElementById('error-opciones-trato').innerHTML = "Debe seleccionar una opción";
+   // }
+  //  return seleccionado;
+//} 
 
 
 
 const enviarFormulario = () => {
     let formularioCorrecto = true;
-    let validaTrato = validarTrato()
-    console.log( 'trato ' + validaTrato );
+  // let validaRadioInput = validarRadioInput()
+   // console.log( 'opciones2 ' + validaRadioInput[i]);
+    console.log(setRadio(name, value));
     }
 
 
